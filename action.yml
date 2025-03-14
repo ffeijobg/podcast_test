@@ -1,0 +1,19 @@
+name: "PodCast Generator"
+author: "Fernando Feijo"
+description: "generates a feed"
+runs:
+  using: "docker"
+  image: "DockerFile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: the commiter
+    required: true
+    default: ${{ github.actor}}@localhost
+  name:
+    description: The commiter name
+    required: true
+    default: ${{ github.actor }}
+
